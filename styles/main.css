@@ -28,6 +28,10 @@ body {
   cursor: pointer;
 }
 
+.logo-button:active {
+  background-color: white;
+}
+
 .navbar .links-container {
   display: table;
   position: absolute;
@@ -56,6 +60,11 @@ body {
 
 .links-container .navbar-link:hover {
   color: rgb(233,50,117);
+}
+
+.links-container .navbar-link:active {
+  color: rgb(233,50,117);
+  background-color: white;
 }
 
 .container {
