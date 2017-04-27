@@ -47,6 +47,7 @@ background-color: rgb(58,23,63);
   transition-delay: 0.2s;
 }
 
+
 .point .point-title {
   font-size: 1.25rem;
 }
@@ -56,4 +57,12 @@ background-color: rgb(58,23,63);
 .ion-iphone {
   color: rgb(223,50,117);
   font-size: 5rem;
+}
+
+#button {
+  opacity: 0;
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ z-index: 2;
 }
