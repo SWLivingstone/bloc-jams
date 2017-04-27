@@ -58,11 +58,3 @@ background-color: rgb(58,23,63);
   color: rgb(223,50,117);
   font-size: 5rem;
 }
-
-#button {
-  opacity: 0;
- height: 100%;
- width: 100%;
- position: absolute;
- z-index: 2;
-}
