@@ -27,6 +27,24 @@ var albumMarconi = {
         { title: 'Wrong phone number', duration: '2:15'}
     ]
 };
+
+var albumAndNico = {
+    title: 'The Velvet Underground & Nico',
+    artist: 'The Velevet Underground',
+    label: 'Verve',
+    year: '1967',
+    albumArtUrl: 'assets/images/album_covers/and_nico.jpg',
+    songs: [
+        { title: 'Sunday Morning', duration: '2:54' },
+        { title: "I'm Waiting for the Man", duration: '4:39' },
+        { title: 'Femme Fatale', duration: '2:38'},
+        { title: 'Venus in Furs', duration: '5:12' },
+        { title: 'Run Run Run', duration: '4:22'}
+    ]
+};
+
+
+
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -39,12 +57,13 @@ var createSongRow = function(songNumber, songName, songLength) {
      return template;
  };
 
+ var albumTitle = document.getElementsByClassName('album-view-title')[0];
+ var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+ var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+ var albumImage = document.getElementsByClassName('album-cover-art')[0];
+ var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
  var setCurrentAlbum = function(album) {
-     var albumTitle = document.getElementsByClassName('album-view-title')[0];
-     var albumArtist = document.getElementsByClassName('album-view-artist')[0];
-     var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-     var albumImage = document.getElementsByClassName('album-cover-art')[0];
-     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
      albumTitle.firstChild.nodeValue = album.title;
      albumArtist.firstChild.nodeValue = album.artist;
@@ -57,6 +76,18 @@ var createSongRow = function(songNumber, songName, songLength) {
      }
  };
 
- window.onload = function() {
-     setCurrentAlbum(albumPicasso);
- };
+
+function albumSwap () {
+  var albumList = [albumMarconi,albumAndNico,albumPicasso];
+
+  function switchAlbum (){
+    setCurrentAlbum(albumList[0]);
+    albumList.push(albumList.shift());
+  }
+  return switchAlbum;
+}
+
+window.onload = function() {
+    setCurrentAlbum(albumPicasso);
+    albumImage.addEventListener("click", albumSwap());
+};
