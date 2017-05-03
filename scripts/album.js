@@ -60,14 +60,23 @@ var createSongRow = function(songNumber, songName, songLength) {
 
 
  var findParentByClassName = function(element, targetClass) {
-     if (element) {
+        if (element) {
          var currentParent = element.parentElement;
-         while (currentParent.className !== targetClass && currentParent.className !== null) {
-             currentParent = currentParent.parentElement;
+         if (currentParent === null) {
+           return console.log("No parent found");
          }
+         else {
+           while (currentParent.className !== targetClass && currentParent.className !== null) {
+             if (currentParent === document.getElementsByTagName('html')[0]) {
+               return console.log ("No parent found with that class name");
+             }
+              else {currentParent = currentParent.parentElement;}
+           }
          return currentParent;
-     }
- };
+         }
+      }
+   };
+
 
 
 var getSongItem = function(element) {
@@ -143,4 +152,3 @@ var currentlyPlayingSong = null;
          });
      }
  };
-console.log(songListContainer);
