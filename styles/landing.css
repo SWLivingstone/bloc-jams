@@ -1,11 +1,15 @@
 body.landing {
-background-color: rgb(58,23,63);
+background-image: url(../assets/images/blurred_backgrounds/city_lights.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center;
+background-size: cover;
 }
 
 .hero-content {
   position: relative;
-  min-height: 600px;
-  background-image: url(../assets/images/bloc_jams_bg.jpg);
+  min-height: 450px;
+  background-image: url(../assets/images/dance.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -13,7 +17,7 @@ background-color: rgb(58,23,63);
 
 .hero-content .hero-title {
   position: absolute;
-  top: 40%;
+  top: 10%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -21,10 +25,10 @@ background-color: rgb(58,23,63);
   width: 100%;
   text-align: center;
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  text-shadow: 1px 1px 0px rgb(58,23,63);
+  text-shadow: 3px 3px 1px black;
 }
 
 .selling-points {

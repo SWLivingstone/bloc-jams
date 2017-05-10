@@ -1,5 +1,5 @@
 body.collection {
-  background-image: url(../assets/images/blurred_backgrounds/blur_bg_2.jpg);
+  background-image: url(../assets/images/blurred_backgrounds/city.jpeg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -16,6 +16,9 @@ body.collection {
      margin-bottom: 20px;
      text-align: center;
  }
+.album-covers :hover {
+    transform: scale(1.1);
+}
 
  .collection-album-container .caption {
      margin-top: 10px;
@@ -23,12 +26,13 @@ body.collection {
 
  .collection-album-container .caption p {
      font-size: 1rem;
-     font-weight: 300;
-     color: rgba(255, 255, 255, 0.6);
+     font-weight: 500;
+     color: white;
+     text-shadow: 1px 1px 0px black;
  }
 
  .collection-album-container .caption p a {
-     color: rgba(255, 255, 255, 0.6);
+     color: white;
  }
 
  .collection-album-container .caption p a.album-name {
